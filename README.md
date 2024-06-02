@@ -1,8 +1,9 @@
-# Learn React Context API
+# TEACHING REPO: Context API Introduction
+This repository contains code and examples used for teaching "Reactjs Context-API" For Frontend and Full Stack Development courses
 
-Example to teach my students about React Context API Levels: [simple, full]
-
-## Simple "basic" Level:
+## Purpose
+These examples are intended for instructional use and demonstrate basic concepts. They are not representative of production-level code or my professional work.
+<hr>
 
 ### Steps:
 - In React project, create folder: context, then inside it, create file appContext.js
@@ -15,8 +16,4 @@ Example to teach my students about React Context API Levels: [simple, full]
 - import and render AppProvider in index.js
 - inside appContext.js "at the bottom" create custom hook called useAppContext and return useContext(AppContext) and export it: export const useAppContext = (() => {return useContext(AppContext)})
 - Import and use useAppContext into desired components: const {valueName} = useAppContext() 
-
-## Full "Intermediate" Level:
-
-### Steps: TBC
 
