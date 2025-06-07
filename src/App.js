@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useAppContext } from './context/appContext';
+import { useAppContext } from './context/appContext'; 
 
 
 function App() {
