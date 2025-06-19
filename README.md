@@ -19,5 +19,32 @@ These examples are intended for instructional use and demonstrate basic concepts
 - inside appContext.jsx "at the bottom" create and export custom hook called useAppContext: ```export const useAppContext = (() => {return useContext(AppContext)})```
 - Import and use useAppContext into desired components: ```const {valueName} = useAppContext()```
 
+- Your appContext.jsx should looks like: 
+
+``` javascript
+import { useContext, createContext, useState } from "react";
+const AppContext = createContext()```
+
+export const AppProvider = ({ children }) => {
+
+
+    const [name, setName] = useState("Khaled")
+    function flipName() {
+        setName("Alabssi")
+    }
+
+
+    return (
+        <AppContext.Provider value={{ name, setName, flipName }}>
+            {children}
+
+        </AppContext.Provider>
+
+    )
+}
+export const useAppContext = () => {
+    return useContext(AppContext)
+}```
+
 | Congrats: you just mastered Context API :)
 
