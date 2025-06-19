@@ -9,10 +9,10 @@ These examples are intended for instructional use and demonstrate basic concepts
 - In React project, create folder: context, then inside it, create file appContext.jsx
 - inside appContext.jsx, import createContext, useState, and useContext from react: ```import { createContext, useContext, useState} from "react"```. 
 - inside appContext.jsx, create context called AppContext: ```const AppContext = createContext()```
-- inside appContext.jsx, create and export AppProvider arrow function: ```export const AppProvider = () => {};```
-- inside AppProvider , return AppContext.Provider with value={{}} as attribute: ```<AppContext.Provider value={{}}></AppContext.Provider>```
+- inside appContext.jsx, create and export AppProvider arrow function: ```export const AppProvider = ({children}) => {};```
+- inside AppProvider , return AppContext.Provider with value={{}} as attribute: ```<AppContext.Provider value={{}}>{children}</AppContext.Provider>```
 - inside AppProvider, create your states and functions. **DON'T forget to add them in the value attribute**.
-- add children props to AppProvider and to its return
+- Make sure you have the children in AppProvider and to its return
 - import and render AppProvider in "index.js" or in "main.jsx" if you are using Vite: ```<AppProvider>
     <App />
 </AppProvider>```
